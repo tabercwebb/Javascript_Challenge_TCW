@@ -34,11 +34,11 @@ function handleClick() {
     d3.event.preventDefault();
 
     // Select the Input Element & Get the Value Property of Given Input Element
-    var date = d3.select("#datetime").property("value");
-    var city = d3.select("#city").property("value");
-    var state = d3.select("#state").property("value");
-    var country = d3.select("#country").property("value");
-    var shape = d3.select("#shape").property("value");
+    var date = d3.select("#datetime").property("value").trim().toLowerCase();
+    var city = d3.select("#city").property("value").trim().toLowerCase();
+    var state = d3.select("#state").property("value").trim().toLowerCase();
+    var country = d3.select("#country").property("value").trim().toLowerCase();
+    var shape = d3.select("#shape").property("value").trim().toLowerCase();
 
     // Set TableData as the Value for FilteredData, Where FilteredData is a Replacement Table
     let filteredData = tableData;
